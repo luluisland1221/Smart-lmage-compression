@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImageShrink - Smart Image Compression</title>
+    <meta name="description" content="Free online image compression tool. Reduce image file size without losing quality. Support PNG, JPG formats with instant preview.">
+    <meta name="keywords" content="image compression, photo optimizer, reduce image size, compress pictures, image optimization tool">
+    <title>ImageShrink - Smart Image Compression Tool | Reduce File Size Without Losing Quality</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">ImageShrink</div>
+            <div class="logo">
+                <img src="images/logo.svg" alt="ImageShrink Logo" width="32" height="32">
+                ImageShrink
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="hero">
             <h1>Smart Image Compression</h1>
-            <p>Compress your images without compromising quality</p>
+            <p class="hero-subtitle">Optimize your images instantly while preserving quality</p>
         </section>
 
         <section class="compression-workspace">
             <div class="upload-container" id="dropZone">
                 <div class="upload-area">
                     <img src="images/upload-icon.svg" alt="Upload" class="upload-icon">
-                    <p>Drag and drop your image here</p>
-                    <p>or</p>
+                    <h2>Upload Your Image</h2>
+                    <p class="upload-text">Drag and drop your image here</p>
+                    <p class="upload-support">Supports: PNG, JPG (up to 10MB)</p>
+                    <div class="upload-divider">or</div>
                     <button class="upload-button">Choose File</button>
                     <input type="file" id="fileInput" accept="image/*" hidden>
                 </div>
@@ -33,24 +45,36 @@
             <div class="preview-container" hidden>
                 <div class="preview-grid">
                     <div class="preview-card original">
-                        <h3>Original</h3>
+                        <h3>Original Image</h3>
                         <div class="image-preview">
                             <img id="originalPreview" alt="Original">
                         </div>
                         <div class="file-info">
-                            <span class="file-size" id="originalSize">0 KB</span>
-                            <span class="file-format" id="fileFormat">-</span>
+                            <div class="info-item">
+                                <img src="images/file-icon.svg" alt="File size" width="16" height="16">
+                                <span class="file-size" id="originalSize">0 KB</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="images/format-icon.svg" alt="File format" width="16" height="16">
+                                <span class="file-format" id="fileFormat">-</span>
+                            </div>
                         </div>
                     </div>
 
                     <div class="preview-card compressed">
-                        <h3>Compressed</h3>
+                        <h3>Compressed Result</h3>
                         <div class="image-preview">
                             <img id="compressedPreview" alt="Compressed">
                         </div>
                         <div class="file-info">
-                            <span class="file-size" id="compressedSize">0 KB</span>
-                            <span class="compression-ratio" id="compressionRatio">-</span>
+                            <div class="info-item">
+                                <img src="images/compressed-icon.svg" alt="Compressed size" width="16" height="16">
+                                <span class="file-size" id="compressedSize">0 KB</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="images/percent-icon.svg" alt="Compression ratio" width="16" height="16">
+                                <span class="compression-ratio" id="compressionRatio">-</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,17 +82,68 @@
                 <div class="compression-controls">
                     <div class="quality-control">
                         <label for="qualitySlider">Compression Quality</label>
-                        <input type="range" id="qualitySlider" min="0" max="100" value="80">
-                        <span id="qualityValue">80%</span>
+                        <div class="slider-container">
+                            <input type="range" id="qualitySlider" min="0" max="100" value="80">
+                            <span id="qualityValue">80%</span>
+                        </div>
                     </div>
-                    <button class="download-button" id="downloadButton">Download Compressed Image</button>
+                    <button class="download-button" id="downloadButton">
+                        <img src="images/download-icon.svg" alt="Download" width="20" height="20">
+                        Download Compressed Image
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Why Choose ImageShrink?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Compress your images in seconds</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Quality Control</h3>
+                    <p>Perfect balance of size and quality</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>100% Secure</h3>
+                    <p>Local processing, no uploads needed</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What file types are supported?</h3>
+                    <p>We currently support PNG and JPG/JPEG image formats.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a file size limit?</h3>
+                    <p>Yes, you can compress images up to 10MB in size.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How does the quality setting work?</h3>
+                    <p>The quality slider lets you control the compression level. Higher values maintain better quality but result in larger file sizes.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 ImageShrink. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.svg" alt="ImageShrink" width="24" height="24">
+                <span>ImageShrink</span>
+            </div>
+            <p class="footer-text">Fast, free, and secure image compression</p>
+            <p class="copyright">© 2024 ImageShrink. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="js/compression.js"></script>
