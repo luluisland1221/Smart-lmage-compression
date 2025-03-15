@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo - BabyHead</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/upload.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">BabyHead</a>
+        </nav>
+    </header>
+
+    <main class="upload-container">
+        <h1>Upload Your Baby's Photo</h1>
+        
+        <div class="upload-guidelines">
+            <h2>Photo Guidelines</h2>
+            <ul>
+                <li>Use a clear, well-lit photo</li>
+                <li>Ensure baby's head is centered</li>
+                <li>Take photo from above</li>
+                <li>Remove hats or accessories</li>
+            </ul>
+        </div>
+
+        <div class="upload-area" id="dropZone">
+            <img src="images/upload-cloud.svg" alt="Upload">
+            <p>Drag and drop your photo here</p>
+            <p>or</p>
+            <button class="upload-button">Choose File</button>
+            <input type="file" id="fileInput" accept="image/*" hidden>
+        </div>
+
+        <div class="preview-area" hidden>
+            <img id="preview" alt="Preview">
+            <button class="analyze-button">Analyze Photo</button>
+        </div>
+    </main>
+</body>
+</html> 

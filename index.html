@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageShrink - Smart Image Compression</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ImageShrink</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Smart Image Compression</h1>
+            <p>Compress your images without compromising quality</p>
+        </section>
+
+        <section class="compression-workspace">
+            <div class="upload-container" id="dropZone">
+                <div class="upload-area">
+                    <img src="images/upload-icon.svg" alt="Upload" class="upload-icon">
+                    <p>Drag and drop your image here</p>
+                    <p>or</p>
+                    <button class="upload-button">Choose File</button>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <div class="preview-container" hidden>
+                <div class="preview-grid">
+                    <div class="preview-card original">
+                        <h3>Original</h3>
+                        <div class="image-preview">
+                            <img id="originalPreview" alt="Original">
+                        </div>
+                        <div class="file-info">
+                            <span class="file-size" id="originalSize">0 KB</span>
+                            <span class="file-format" id="fileFormat">-</span>
+                        </div>
+                    </div>
+
+                    <div class="preview-card compressed">
+                        <h3>Compressed</h3>
+                        <div class="image-preview">
+                            <img id="compressedPreview" alt="Compressed">
+                        </div>
+                        <div class="file-info">
+                            <span class="file-size" id="compressedSize">0 KB</span>
+                            <span class="compression-ratio" id="compressionRatio">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compression-controls">
+                    <div class="quality-control">
+                        <label for="qualitySlider">Compression Quality</label>
+                        <input type="range" id="qualitySlider" min="0" max="100" value="80">
+                        <span id="qualityValue">80%</span>
+                    </div>
+                    <button class="download-button" id="downloadButton">Download Compressed Image</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 ImageShrink. All rights reserved.</p>
+    </footer>
+
+    <script src="js/compression.js"></script>
+</body>
+</html> 
